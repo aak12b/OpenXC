@@ -14,4 +14,5 @@ public class KilometersPerHour extends Quantity<Number> {
     public String getTypeString() {
         return TYPE_STRING;
     }
+
 }

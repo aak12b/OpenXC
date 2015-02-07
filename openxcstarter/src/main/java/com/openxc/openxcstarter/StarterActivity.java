@@ -16,29 +16,29 @@ import android.widget.TextView;
 import android.telephony.SmsManager;
 import android.widget.Toast;
 
+import com.openxc.measurements.VehicleSpeed;
+import com.openxc.units.KilometersPerHour;
 import com.openxcplatform.openxcstarter.R;
 import com.openxc.VehicleManager;
 import com.openxc.measurements.Measurement;
-import com.openxc.measurements.EngineSpeed;
+
 
 public class StarterActivity extends Activity {
     private static final String TAG = "StarterActivity";
 
     private VehicleManager mVehicleManager;
-    private TextView mEngineSpeedView;
+
     public Button button;
     public String phoneNo;
     public String message;
     public int max_speed;
+    public double max_kph;
+    public boolean derp = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starter);
-
-        // grab a reference to the engine speed text object in the UI, so we can
-        // manipulate its value later from Java code
-        mEngineSpeedView = (TextView) findViewById(R.id.vehicle_speed);
 
         addListener();
 
@@ -53,20 +53,22 @@ public class StarterActivity extends Activity {
                 EditText speed = (EditText) findViewById(R.id.editText2);
                 phoneNo = "" + phoneNum.getText();
                 max_speed = Integer.parseInt(speed.getText().toString());
+                max_kph = max_speed * 1.609;
                 message = "Vehicle has gone faster than " + max_speed + " miles per hour.";
+                String intro = "This number has been chosen as a VTHax Guardian. The maximum MPH of the vehicle was entered as "
+                        + max_speed + ".";
+                derp = false;
 
                 try {
                     SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(phoneNo, null, message, null, null);
-                    Toast.makeText(getApplicationContext(), "SMS sent.",
-                            Toast.LENGTH_LONG).show();
+                    smsManager.sendTextMessage(phoneNo, null, intro, null, null);
+
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(),
                             "SMS failed, please try again.",
                             Toast.LENGTH_LONG).show();
                     e.printStackTrace();//
                 }//
-
             }
         });
     }
@@ -80,7 +82,7 @@ public class StarterActivity extends Activity {
             Log.i(TAG, "Unbinding from Vehicle Manager");
             // Remember to remove your listeners, in typical Android
             // fashion.
-            mVehicleManager.removeListener(EngineSpeed.class,
+            mVehicleManager.removeListener(VehicleSpeed.class,
                     mSpeedListener);
             unbindService(mConnection);
             mVehicleManager = null;
@@ -101,29 +103,29 @@ public class StarterActivity extends Activity {
     /* This is an OpenXC measurement listener object - the type is recognized
      * by the VehicleManager as something that can receive measurement updates.
      * Later in the file, we'll ask the VehicleManager to call the receive()
-     * function here whenever a new EngineSpeed value arrives.
+     * function here whenever a new VehicleSpeed value arrives.
      */
-    EngineSpeed.Listener mSpeedListener = new EngineSpeed.Listener() {
+
+    int counter = 0;
+    VehicleSpeed.Listener mSpeedListener = new VehicleSpeed.Listener() {
         @Override
         public void receive(Measurement measurement) {
-            // When we receive a new EngineSpeed value from the car, we want to
-            // update the UI to display the new value. First we cast the generic
-            // Measurement back to the type we know it to be, an EngineSpeed.
-            final EngineSpeed speed = (EngineSpeed) measurement;
-            // In order to modify the UI, we have to make sure the code is
-            // running on the "UI thread" - Google around for this, it's an
-            // important concept in Android.
-            StarterActivity.this.runOnUiThread(new Runnable() {
-                public void run() {
-                    // Finally, we've got a new value and we're running on the
-                    // UI thread - we set the text of the EngineSpeed view to
-                    // the latest value
-                    mEngineSpeedView.setText("Engine speed (RPM): "
-                            + speed.getValue().doubleValue());
-                }
-            });
-        }
+            if(!derp){
+            final VehicleSpeed speed = (VehicleSpeed) measurement;
+
+            KilometersPerHour kilometersPerHour = speed.getValue();
+            if(kilometersPerHour.doubleValue() > max_kph &&  counter == 0){
+                SmsManager smsManager = SmsManager.getDefault();
+                smsManager.sendTextMessage(phoneNo, null, message, null, null);
+
+                counter++;
+            }
+
+        }}
+
     };
+
+
 
     private ServiceConnection mConnection = new ServiceConnection() {
         // Called when the connection with the VehicleManager service is
@@ -137,11 +139,11 @@ public class StarterActivity extends Activity {
             mVehicleManager = ((VehicleManager.VehicleBinder) service)
                     .getService();
 
-            // We want to receive updates whenever the EngineSpeed changes. We
-            // have an EngineSpeed.Listener (see above, mSpeedListener) and here
+            // We want to receive updates whenever the VehicleSpeed changes. We
+            // have an VehicleSpeed.Listener (see above, mSpeedListener) and here
             // we request that the VehicleManager call its receive() method
-            // whenever the EngineSpeed changes
-            mVehicleManager.addListener(EngineSpeed.class, mSpeedListener);
+            // whenever the VehicleSpeed changes
+            mVehicleManager.addListener(VehicleSpeed.class, mSpeedListener);
         }
 
         // Called when the connection with the service disconnects unexpectedly
