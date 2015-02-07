@@ -1,10 +1,13 @@
 package com.openxc.openxcstarter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -51,6 +54,13 @@ public class StarterActivity extends Activity {
             public void onClick(View view) {
                 EditText phoneNum = (EditText) findViewById(R.id.editText);
                 EditText speed = (EditText) findViewById(R.id.editText2);
+                // Check if something has been input in the fields
+                if(phoneNum.length() < 1 || speed.length() < 1){
+                    ((Button) findViewById(R.id.button)).setText("Please Fix Errors and Submit");
+                    return;
+                } else {
+                    ((Button) findViewById(R.id.button)).setText("Submit");
+                }
                 phoneNo = "" + phoneNum.getText();
                 max_speed = Integer.parseInt(speed.getText().toString());
                 max_kph = max_speed * 1.609;
@@ -106,7 +116,6 @@ public class StarterActivity extends Activity {
      * function here whenever a new VehicleSpeed value arrives.
      */
 
-    int counter = 0;
     VehicleSpeed.Listener mSpeedListener = new VehicleSpeed.Listener() {
         @Override
         public void receive(Measurement measurement) {
@@ -114,11 +123,9 @@ public class StarterActivity extends Activity {
             final VehicleSpeed speed = (VehicleSpeed) measurement;
 
             KilometersPerHour kilometersPerHour = speed.getValue();
-            if(kilometersPerHour.doubleValue() > max_kph &&  counter == 0){
+            if(kilometersPerHour.doubleValue() > max_kph){
                 SmsManager smsManager = SmsManager.getDefault();
                 smsManager.sendTextMessage(phoneNo, null, message, null, null);
-
-                counter++;
             }
 
         }}
@@ -159,4 +166,5 @@ public class StarterActivity extends Activity {
         getMenuInflater().inflate(R.menu.starter, menu);
         return true;
     }
+
 }

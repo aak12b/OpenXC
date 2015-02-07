@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Andrew\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\18.0\cce0823396aa693798f8882e64213b1772032b09\guava-18.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\guava-18.0-a06b9a56c914cc980fa32d87f70afc841d2cd323.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="73a3ddd2e868c861f40236d468564f2d10cd05cf">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\classes-8502f9af6fb20df83b6855cfa34b3b05aa47275c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\libs\junit-4.12-beta-2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="eb899c93c162058b6ae990e7e279507803edd1fb">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\junit-4.12-beta-2-0359837283effe12cbbb240b6c82834bcb30befb.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\libs\commons-io-2.4.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\commons-io-2.4-f918452e2c26fe0b732e62abdf6dbd7c5fbe69fc.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\libs\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\support-v4-19.1.0-d7a43aaec2e9e3ac856750c08c88b8b9fc862a5d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andrew\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java\2.6.1\d9521f2aecb909835746b7a5facf612af5e890e8\protobuf-java-2.6.1.jar"
+        jar="/home/simon/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.6.1/d9521f2aecb909835746b7a5facf612af5e890e8/protobuf-java-2.6.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\protobuf-java-2.6.1-a69ed1918f6a9cc1e4e04141c1f79746538efad9.jar" />
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/protobuf-java-2.6.1-2772c5bcd36f5fdfd88389e1aea0bfc6d7d6164a.jar" />
     </item>
     <item
-        jar="C:\Users\Andrew\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jar="/home/simon/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\gson-2.3-fce34dabd913c3851d6620ee1858a51d8c000d91.jar" />
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/gson-2.3-7d7a0accf85be9f0d8f0cd97a6355cfe5998372f.jar" />
+    </item>
+    <item
+        jar="/home/simon/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/guava-18.0-f508bd9880175442a41771dc3e890041caf127a5.jar" />
+    </item>
+    <item
+        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0ea7a0a10289009cb523938ff11b340186e5f560">
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/classes-1705785c556364b220704d95371d9fd1eeef8f30.jar" />
+    </item>
+    <item
+        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/libs/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/support-v4-19.1.0-f2d759bfaf6efbd9ab617e54330360733b26d698.jar" />
+    </item>
+    <item
+        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/libs/junit-4.12-beta-2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="eb899c93c162058b6ae990e7e279507803edd1fb">
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/junit-4.12-beta-2-11324ab036287ce3787730a1d77fc0d0c70f6569.jar" />
+    </item>
+    <item
+        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/libs/commons-io-2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/commons-io-2.4-8f423e1d119469cba25e40e3b94bb67e78bd47b0.jar" />
     </item>
 
 </items>

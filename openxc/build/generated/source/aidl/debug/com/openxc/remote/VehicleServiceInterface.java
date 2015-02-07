@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\Andrew\\Desktop\\VTHacks\\OpenXC\\openxc\\src\\main\\aidl\\com\\openxc\\remote\\VehicleServiceInterface.aidl
+ * Original file: /home/simon/Desktop/VTHacks/OpenXC/openxc/src/main/aidl/com/openxc/remote/VehicleServiceInterface.aidl
  */
 package com.openxc.remote;
 /**
