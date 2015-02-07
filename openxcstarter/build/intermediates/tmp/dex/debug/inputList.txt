@@ -1,8 +1,8 @@
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\classes\debug
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\gson-2.3-9a3f4cd86b2862d71e0ff166481a8a55ca40b0ef.jar
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\commons-io-2.4-33070c2ac794064ccd295cae2e2cb058ae692ed8.jar
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\junit-4.12-beta-2-7a72d638e500f855681bd08b39a57369f780eae2.jar
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\classes-3e3c5ceeebe339708b08410ada8ff299c432387b.jar
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\protobuf-java-2.6.1-fd517ad8d310cc73f62861bdebce1a4a7da1fb53.jar
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\support-v4-19.1.0-2ddf361db468b4dff8c126dd02d4a1dee907cc97.jar
-C:\VTHacks\openxc-starter1\openxcstarter\build\intermediates\pre-dexed\debug\guava-18.0-6b9ec2a1a85dd9e1b9e8f59f2eeacd63c6d06e82.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\classes\debug
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\gson-2.3-fce34dabd913c3851d6620ee1858a51d8c000d91.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\commons-io-2.4-f918452e2c26fe0b732e62abdf6dbd7c5fbe69fc.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\junit-4.12-beta-2-0359837283effe12cbbb240b6c82834bcb30befb.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\classes-8502f9af6fb20df83b6855cfa34b3b05aa47275c.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\protobuf-java-2.6.1-a69ed1918f6a9cc1e4e04141c1f79746538efad9.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\support-v4-19.1.0-d7a43aaec2e9e3ac856750c08c88b8b9fc862a5d.jar
+C:\Users\Andrew\Desktop\VTHacks\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\guava-18.0-a06b9a56c914cc980fa32d87f70afc841d2cd323.jar

@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.telephony.SmsManager;
 import android.widget.Toast;
@@ -23,29 +26,50 @@ public class StarterActivity extends Activity {
 
     private VehicleManager mVehicleManager;
     private TextView mEngineSpeedView;
+    public Button button;
+    public String phoneNo;
+    public String message;
+    public int max_speed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starter);
-        String phoneNo = "8505084363";
-        String message = "Hey you did it";
+
         // grab a reference to the engine speed text object in the UI, so we can
         // manipulate its value later from Java code
         mEngineSpeedView = (TextView) findViewById(R.id.vehicle_speed);
-        try {
-            SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage(phoneNo, null, message, null, null);
-            Toast.makeText(getApplicationContext(), "SMS sent.",
-                    Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(),
-                    "SMS failed, please try again.",
-                    Toast.LENGTH_LONG).show();
-            e.printStackTrace();//
-        }//
+
+        addListener();
+
     }
 
+    public void addListener(){
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText phoneNum = (EditText) findViewById(R.id.editText);
+                EditText speed = (EditText) findViewById(R.id.editText2);
+                phoneNo = "" + phoneNum.getText();
+                max_speed = Integer.parseInt(speed.getText().toString());
+                message = "Vehicle has gone faster than " + max_speed + " miles per hour.";
+
+                try {
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(phoneNo, null, message, null, null);
+                    Toast.makeText(getApplicationContext(), "SMS sent.",
+                            Toast.LENGTH_LONG).show();
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(),
+                            "SMS failed, please try again.",
+                            Toast.LENGTH_LONG).show();
+                    e.printStackTrace();//
+                }//
+
+            }
+        });
+    }
 
     @Override
     public void onPause() {

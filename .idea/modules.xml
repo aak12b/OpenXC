@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/OpenXC.iml" filepath="$PROJECT_DIR$/OpenXC.iml" />
       <module fileurl="file://$PROJECT_DIR$/openxc/openxc.iml" filepath="$PROJECT_DIR$/openxc/openxc.iml" />
       <module fileurl="file://$PROJECT_DIR$/openxc-starter1.iml" filepath="$PROJECT_DIR$/openxc-starter1.iml" />
       <module fileurl="file://$PROJECT_DIR$/openxcstarter/openxcstarter.iml" filepath="$PROJECT_DIR$/openxcstarter/openxcstarter.iml" />
