@@ -166,7 +166,7 @@ public class StarterActivity extends Activity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
+                content += "End of Report\n";
                 String[] parsed = profiledata.split(":");
                 phoneNo = parsed[1];
 

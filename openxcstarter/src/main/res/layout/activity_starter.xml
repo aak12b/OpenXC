@@ -70,7 +70,7 @@
                 android:id="@+id/editText3" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:text="Submit New Profile"
                 android:id="@+id/button"
@@ -78,14 +78,14 @@
                 />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:text="Use Existing Profile"
+                android:text="Use Latest Profile"
                 android:id="@+id/useProfile"
                 android:layout_marginTop="20dp" />
 
             <Button
-                android:layout_width="179dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:text="Generate Report"
                 android:id="@+id/generateForm"
