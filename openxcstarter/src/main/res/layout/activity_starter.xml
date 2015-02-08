@@ -72,9 +72,24 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit Form"
+                android:text="Submit New Profile"
                 android:id="@+id/button"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use Existing Profile"
+                android:id="@+id/useProfile"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:text="Generate Report"
+                android:id="@+id/generateForm"
+                android:layout_marginTop="20dp"
                 />
 
         </LinearLayout>

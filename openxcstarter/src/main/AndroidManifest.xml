@@ -18,6 +18,7 @@
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
