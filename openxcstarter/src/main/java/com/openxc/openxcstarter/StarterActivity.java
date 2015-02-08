@@ -24,7 +24,9 @@ public class StarterActivity extends Activity {
     public String phoneNo;
     public String message;
     public int max_speed;
+    public int max_rpms;
     public double max_kph;
+
 
 
     @Override
@@ -43,14 +45,16 @@ public class StarterActivity extends Activity {
             public void onClick(View view) {
                 EditText phoneNum = (EditText) findViewById(R.id.editText);
                 EditText speed = (EditText) findViewById(R.id.editText2);
+                EditText rpms = (EditText) findViewById(R.id.editText3);
                 phoneNo = "" + phoneNum.getText();
                 max_speed = Integer.parseInt(speed.getText().toString());
                 max_kph = max_speed * 1.609;
+                max_rpms = Integer.parseInt(rpms.getText().toString());
                 message = "Vehicle has gone faster than " + max_speed + " miles per hour.";
                 String intro = "This number has been chosen as a VT Phone Home Guardian. The maximum MPH of the vehicle was entered as "
                         + max_speed + ".";
                 Intent i = new Intent(StarterActivity.this, MyIntentService.class);
-                String push = max_kph + ":" + phoneNo;
+                String push = max_kph + ":" + phoneNo + ":" + max_rpms;
                 i.putExtra("txt", push);
                 startService(i);
                 try {

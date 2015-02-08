@@ -27,10 +27,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Enter Contact Phone #:"
-                android:id="@+id/textView"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                 />
 
             <EditText
                 android:layout_width="fill_parent"
@@ -39,10 +36,6 @@
                 android:ems="10"
                 android:id="@+id/editText"
                 android:layout_below="@+id/textView"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
                 android:maxLength="10"/>
 
             <TextView
@@ -51,10 +44,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Enter Maximum Speed (MPH):"
                 android:id="@+id/textView2"
-                android:layout_below="@+id/editText"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="40dp" />
+                android:layout_marginTop="20dp" />
 
             <EditText
                 android:layout_width="fill_parent"
@@ -62,25 +52,35 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/editText2"
-                android:layout_below="@+id/textView2"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Enter Maximum RPMs:"
+                android:id="@+id/textView3"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText3" />
 
             <Button
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit Form"
                 android:id="@+id/button"
-                android:layout_marginTop="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
+                android:layout_marginTop="50dp"
+                />
 
         </LinearLayout>
 
     </ScrollView>
+
+
 
 </LinearLayout>
