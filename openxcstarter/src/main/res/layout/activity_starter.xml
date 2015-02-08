@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Enter Maximum RPMs:"
+                android:text="Enter Vehicle Redline:"
                 android:id="@+id/textView3"
                 android:layout_marginTop="30dp"/>
 

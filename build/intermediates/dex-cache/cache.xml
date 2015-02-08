@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/home/simon/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.6.1/d9521f2aecb909835746b7a5facf612af5e890e8/protobuf-java-2.6.1.jar"
+        jar="C:\Users\Aaron\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java\2.6.1\d9521f2aecb909835746b7a5facf612af5e890e8\protobuf-java-2.6.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="d9521f2aecb909835746b7a5facf612af5e890e8">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/protobuf-java-2.6.1-2772c5bcd36f5fdfd88389e1aea0bfc6d7d6164a.jar" />
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\protobuf-java-2.6.1-fd517ad8d310cc73f62861bdebce1a4a7da1fb53.jar" />
     </item>
     <item
-        jar="/home/simon/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jar="C:\Users\Aaron\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/gson-2.3-7d7a0accf85be9f0d8f0cd97a6355cfe5998372f.jar" />
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\gson-2.3-9a3f4cd86b2862d71e0ff166481a8a55ca40b0ef.jar" />
     </item>
     <item
-        jar="/home/simon/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
+        jar="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="cce0823396aa693798f8882e64213b1772032b09">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/guava-18.0-f508bd9880175442a41771dc3e890041caf127a5.jar" />
+        sha1="bc1559bd9fe296a2df0f3b897ab317a2fd45f062">
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\classes-ccc6e09eae20c626ce080167f72ce3f22e636aae.jar" />
     </item>
     <item
-        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0ea7a0a10289009cb523938ff11b340186e5f560">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/classes-1705785c556364b220704d95371d9fd1eeef8f30.jar" />
-    </item>
-    <item
-        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/libs/support-v4-19.1.0.jar"
+        jar="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\libs\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/support-v4-19.1.0-f2d759bfaf6efbd9ab617e54330360733b26d698.jar" />
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\support-v4-19.1.0-8af26a8c9c3c67ff990f5a2d6a48e4dd7ea2e229.jar" />
     </item>
     <item
-        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/libs/junit-4.12-beta-2.jar"
+        jar="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\libs\junit-4.12-beta-2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="eb899c93c162058b6ae990e7e279507803edd1fb">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/junit-4.12-beta-2-11324ab036287ce3787730a1d77fc0d0c70f6569.jar" />
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\junit-4.12-beta-2-5203f67f262b14ea268cc5a5f11e11a6bdc50725.jar" />
     </item>
     <item
-        jar="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/exploded-aar/OpenXC/openxc/unspecified/libs/commons-io-2.4.jar"
+        jar="C:\Users\Aaron\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\18.0\cce0823396aa693798f8882e64213b1772032b09\guava-18.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\guava-18.0-6b9ec2a1a85dd9e1b9e8f59f2eeacd63c6d06e82.jar" />
+    </item>
+    <item
+        jar="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\exploded-aar\OpenXC\openxc\unspecified\libs\commons-io-2.4.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
-        <dex dex="/home/simon/Desktop/VTHacks/OpenXC/openxcstarter/build/intermediates/pre-dexed/debug/commons-io-2.4-8f423e1d119469cba25e40e3b94bb67e78bd47b0.jar" />
+        <dex dex="C:\VTHacks\Final\OpenXC\openxcstarter\build\intermediates\pre-dexed\debug\commons-io-2.4-821610fc72fd9336cde91e3876282dcaa6cc7ce7.jar" />
     </item>
 
 </items>

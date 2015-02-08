@@ -10,9 +10,11 @@ import android.telephony.SmsManager;
 import android.util.Log;
 
 import com.openxc.VehicleManager;
+import com.openxc.measurements.EngineSpeed;
 import com.openxc.measurements.Measurement;
 import com.openxc.measurements.VehicleSpeed;
 import com.openxc.units.KilometersPerHour;
+import com.openxc.units.RotationsPerMinute;
 
 
 public class MyIntentService extends IntentService {
@@ -21,12 +23,18 @@ public class MyIntentService extends IntentService {
     private boolean work = true;
     private VehicleManager mVehicleManager;
     private double max_kph;
+    private double max_revs;
+    private double redline;
     private double vspeed;
+    private double rpms;
+    private double revThreshold = 0.75; //75% threshold from redline
     private String message;
     private String phoneNo;
-    private String busted = "The vehicle has surpassed the indicated maximum speed.";
+    private String busted = "The vehicle has exceeded the indicated maximum speed.";
+    private String bustedHR = "The vehicle has exceeded 75% redline.";
 
-    private int count = 0;
+    private int VScount = 0;
+    private int RevCount = 0;
 
     public MyIntentService() {
         super("MyIntentService");
@@ -51,17 +59,33 @@ public class MyIntentService extends IntentService {
                     KilometersPerHour derp = speed.getValue();
                     vspeed = derp.doubleValue();
                     // do stuff with the measurement
-                    if (vspeed > max_kph && count == 0)
+                    if (vspeed > max_kph && VScount == 0)
                     {
                         SmsManager smsManager = SmsManager.getDefault();
                         smsManager.sendTextMessage(phoneNo, null, busted, null, null);
                         work = false;
-                        count++;
+                        VScount++;
+                    }
+                }
+            };
+
+            EngineSpeed.Listener esListener = new EngineSpeed.Listener() {
+                public void receive(Measurement measurement) {
+                    final EngineSpeed revs = (EngineSpeed) measurement;
+                    RotationsPerMinute rotes = revs.getValue();
+                    rpms = rotes.doubleValue();
+
+                    if (rpms > max_revs && RevCount == 0){
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(phoneNo, null, bustedHR, null, null);
+                        work = false;
+                        RevCount++;
                     }
                 }
             };
 
             mVehicleManager.addListener(VehicleSpeed.class, listener);
+            mVehicleManager.addListener(EngineSpeed.class, esListener);
         }
 
         // Called when the connection with the service disconnects unexpectedly
@@ -89,6 +113,8 @@ public class MyIntentService extends IntentService {
         String[] separated = message.split(":");
         max_kph = Double.parseDouble(separated[0]);
         phoneNo = separated[1];
+        redline = Double.parseDouble(separated[2]);
+        max_revs = revThreshold * redline;
 
         while(work) {
             //Dont do a damn thing.
